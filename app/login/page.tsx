@@ -108,20 +108,6 @@ export default function LoginPage() {
             )}
           </button>
         </form>
-
-        <div className="mt-8 p-4 rounded" style={{ background: "rgb(247, 246, 243)" }}>
-          <p className="text-sm font-medium mb-2" style={{ color: "rgb(55, 53, 47)" }}>
-            Demo credentials:
-          </p>
-          <div className="space-y-1 text-sm" style={{ color: "rgb(120, 119, 116)" }}>
-            <p>
-              <strong>Email:</strong> admin@example.com
-            </p>
-            <p>
-              <strong>Password:</strong> password
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   )
