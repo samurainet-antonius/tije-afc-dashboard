@@ -59,7 +59,7 @@ export default function DashboardPage() {
   const [error, setError] = useState<string>("")
   const [sortConfig, setSortConfig] = useState<SortConfig>({ field: "created_at", direction: "desc" })
   const router = useRouter()
-  const [autoRefresh, setAutoRefresh] = useState(true)
+  const [autoRefresh, setAutoRefresh] = useState(false)
   const [lastRefresh, setLastRefresh] = useState<Date>(new Date())
 
   useEffect(() => {
