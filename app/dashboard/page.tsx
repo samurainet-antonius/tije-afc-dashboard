@@ -315,7 +315,9 @@ export default function DashboardPage() {
       );
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+        console.log("Force payment failed response:", data);
+        alert(data.data.message); // atau bisa ganti toast/notification
       }
 
       const data = await response.json();
