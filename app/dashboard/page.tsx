@@ -326,7 +326,6 @@ export default function DashboardPage() {
       alert("Force Payment berhasil!"); // atau bisa ganti toast/notification
     } catch (err) {
       console.error("Error force payment:", err);
-      alert(err instanceof Error ? err.message : "Gagal melakukan Force Payment");
     }
   };
 
