@@ -23,13 +23,19 @@ interface TripDetail {
   created_at: string
 }
 
+interface IssuerDetail {
+  code: string
+  name: string
+}
+
 interface Trip {
   id: number
   operator_id: number
   user_cpan: string
   amount: number
   status: string
-  issuer: string
+  issuer_code: string
+  issuer: IssuerDetail
   created_at: string
   tap_in_at: string
   tap_out_at: string
@@ -717,7 +723,7 @@ export default function DashboardPage() {
                           <td className="font-mono text-sm">
                             {"***" + trip.user_cpan?.slice(-4)}
                           </td>
-                          <td>{trip.issuer}</td>
+                          <td>{trip.issuer_detail.name}</td>
                           <td>{formatCurrency(trip.amount)}</td>
                           <td>{renderTripDetailCell(getTripDetailsByType(trip, "TAP_IN"))}</td>
                           <td>{renderTripDetailCell(getTripDetailsByType(trip, "TAP_OUT"))}</td>
