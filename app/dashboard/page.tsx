@@ -29,6 +29,7 @@ interface Trip {
   user_cpan: string
   amount: number
   status: string
+  issuer: string
   created_at: string
   tap_in_at: string
   tap_out_at: string
@@ -700,6 +701,7 @@ export default function DashboardPage() {
                           <SortIcon field="user_cpan" />
                         </button>
                       </th>
+                      <th>Issuer</th>
                       <th>Tarif</th>
                       <th>TAP IN</th>
                       <th>TAP OUT</th>
@@ -715,6 +717,7 @@ export default function DashboardPage() {
                           <td className="font-mono text-sm">
                             {"***" + trip.user_cpan?.slice(-4)}
                           </td>
+                          <td>{trip.issuer}</td>
                           <td>{formatCurrency(trip.amount)}</td>
                           <td>{renderTripDetailCell(getTripDetailsByType(trip, "TAP_IN"))}</td>
                           <td>{renderTripDetailCell(getTripDetailsByType(trip, "TAP_OUT"))}</td>
