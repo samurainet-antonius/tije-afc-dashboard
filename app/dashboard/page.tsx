@@ -343,7 +343,7 @@ export default function DashboardPage() {
     return (
       <div className="space-y-2">
         <div className="text-sm font-medium">{formatCurrency(detail.amount)}</div>
-        <div className="text-sm font-medium">{formatCurrency(detail.acquirer_code)}</div>
+        <div className="text-sm font-medium">{detail.acquirer_code}</div>
         <div className="text-xs" style={{ color: "rgb(120, 119, 116)" }}>
           {formatTime(detail.CreatedAt)}
         </div>
