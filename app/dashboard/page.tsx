@@ -21,6 +21,7 @@ interface TripDetail {
   source: string
   source_timestamp: string
   created_at: string
+  acquirer_code: string
 }
 
 interface IssuerDetail {
@@ -88,7 +89,7 @@ export default function DashboardPage() {
       }
       setError("")
 
-      const response = await fetch("https://afc-dev.ainosi.net/api/v1/transactions/trips?start_date=2025-12-09&end_date=2025-12-09&search", {
+      const response = await fetch("https://afc-dev.ainosi.net/api/v1/transactions/trips?start_date=2025-12-20&end_date=2025-12-20&search", {
         method: "GET",
         headers: {
           "Authorization": "Basic NDI0MDUyOlpvUVFZVk1mdHJ3dVZzeWFlQ1c0c01ndjdMWjhGRmVu",
@@ -342,6 +343,7 @@ export default function DashboardPage() {
     return (
       <div className="space-y-2">
         <div className="text-sm font-medium">{formatCurrency(detail.amount)}</div>
+        <div className="text-sm font-medium">{formatCurrency(detail.acquirer_code)}</div>
         <div className="text-xs" style={{ color: "rgb(120, 119, 116)" }}>
           {formatTime(detail.CreatedAt)}
         </div>
