@@ -89,7 +89,7 @@ export default function DashboardPage() {
       }
       setError("")
 
-      const response = await fetch("https://afc-dev.ainosi.net/api/v1/transactions/trips?start_date=2026-05-20&end_date=2026-05-22&search", {
+      const response = await fetch("https://afc-dev.ainosi.net/api/v1/transactions/trips?start_date=2026-05-25&end_date=2026-05-26&search", {
         method: "GET",
         headers: {
           "Authorization": "Basic NDI0MDUyOlpvUVFZVk1mdHJ3dVZzeWFlQ1c0c01ndjdMWjhGRmVu",
